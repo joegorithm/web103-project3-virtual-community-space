@@ -6,6 +6,6 @@ const router = express.Router();
 
 // define routes to get locations
 router.get('/', LocationsController.getLocations);
-router.get('/:eventId', LocationsController.getLocationById);
+router.get('/:locationId', LocationsController.getLocationById);
 
 export default router;

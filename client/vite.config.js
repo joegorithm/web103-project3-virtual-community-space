@@ -16,7 +16,10 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/api': {
+      '/events': {
+        target: 'http://localhost:3000'
+      },
+      '/locations': {
         target: 'http://localhost:3000'
       }
     }
