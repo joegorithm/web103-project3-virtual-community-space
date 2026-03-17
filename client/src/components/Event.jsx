@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import EventsAPI from '../services/EventsAPI'
+import dates from '../utils/dates'
 import '../css/Event.css'
 
 const Event = (props) => {
@@ -34,9 +36,9 @@ const Event = (props) => {
     useEffect(() => {
         (async () => {
             try {
-                const timeRemaining = await dates.formatRemainingTime(event.remaining)
+                const timeRemaining = await dates.formatRemainingTime(event.date, event.time)
                 setRemaining(timeRemaining)
-                dates.formatNegativeTimeRemaining(remaining, event.id)
+                dates.formatNegativeTimeRemaining(timeRemaining, event.id)
             }
             catch (error) {
                 throw error
