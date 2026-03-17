@@ -21,6 +21,6 @@ const getLocationById = async (req, res) => {
 }
 
 export default {
-    getLocation,
+    getLocations,
     getLocationById
 };
