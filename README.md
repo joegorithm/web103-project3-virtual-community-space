@@ -43,7 +43,7 @@ GIF created with Kap
 
 ## Notes
 
-Describe any challenges encountered while building the app or any additional context you'd like to add.
+It was challenging bringing all the knowledge and information together to build out this app. Referencing the lab and receving starter code was helpful.
 
 ## License
 
