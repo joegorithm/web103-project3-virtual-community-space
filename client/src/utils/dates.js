@@ -8,10 +8,34 @@ const formatTime = async (timeStr) => {
     return `${h}:${m} ${period}`
 }
 
+const normalizeDate = (dateStr) => {
+    if (!dateStr) return ''
+    if (dateStr.includes('T')) return dateStr.split('T')[0]
+    return dateStr
+}
+
+const formatDate = async (dateStr) => {
+    const normalized = normalizeDate(dateStr)
+    if (!normalized) return ''
+
+    const [year, month, day] = normalized.split('-').map(Number)
+    if (!year || !month || !day) return normalized
+
+    return new Date(year, month - 1, day).toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric'
+    })
+}
+
 // ("2026-04-05", "10:00:00") → "in 19 days" or "3 days ago"
 const formatRemainingTime = async (dateStr, timeStr) => {
-    if (!dateStr) return ''
-    const eventDate = new Date(`${dateStr}T${timeStr || '00:00:00'}`)
+    const normalizedDate = normalizeDate(dateStr)
+    if (!normalizedDate) return ''
+
+    const eventDate = new Date(`${normalizedDate}T${timeStr || '00:00:00'}`)
+    if (Number.isNaN(eventDate.getTime())) return ''
+
     const now = new Date()
     const diffMs = eventDate - now
     const absDiffMs = Math.abs(diffMs)
@@ -41,4 +65,4 @@ const formatNegativeTimeRemaining = (remainingStr, eventId) => {
     }
 }
 
-export default { formatTime, formatRemainingTime, formatNegativeTimeRemaining }
+export default { formatTime, formatDate, formatRemainingTime, formatNegativeTimeRemaining }

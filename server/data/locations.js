@@ -15,7 +15,7 @@ const locationsData = [
         city: 'Chicago',
         state: 'IL',
         zip: '60654',
-        image: 'https://images.unsplash.com/photo-1501386761578-eaa54b9b2e65?w=800'
+        image: 'https://picsum.photos/seed/house-of-blues/1200/800'
     },
     {
         id: 3,
@@ -35,6 +35,6 @@ const locationsData = [
         zip: '75219',
         image: 'https://images.unsplash.com/photo-1566737236500-c8ac43014a67?w=800'
     }
-]
+];
 
-export default locationsData
+export default locationsData;

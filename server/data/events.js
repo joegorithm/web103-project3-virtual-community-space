@@ -10,7 +10,7 @@ const eventsData = [
     {
         id: 2,
         title: "Blindfolded Cube Championship",
-        date: "2026-04-12",
+        date: "2024-08-12",
         time: "11:00:00",
         image: "https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=800",
         location_id: 1
@@ -34,7 +34,7 @@ const eventsData = [
     {
         id: 5,
         title: "Pyraminx & Skewb Showdown",
-        date: "2026-05-10",
+        date: "2026-03-05",
         time: "10:30:00",
         image: "https://images.unsplash.com/photo-1525904097878-94fb15835963?auto=format&fit=crop&w=1200&q=80",
         location_id: 2
