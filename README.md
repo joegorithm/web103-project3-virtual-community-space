@@ -4,7 +4,7 @@ Submitted by: **Jonathan Hill**
 
 About this web app: **This web app allows users to view upcoming fictional Rubik's Cube events based on location or view them all at once. The data is stored on a PostgreSQL database.**
 
-Time spent: **4** hours
+Time spent: **5** hours
 
 ## Required Features
 
@@ -37,7 +37,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='/client/src/assets/video-walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with Kap
 
